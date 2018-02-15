@@ -8,24 +8,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Wszystkie wydawnictwa</title>
+<title>Dostępni autorzy</title>
 </head>
 <body>
 
+<h3>Dostępni autorzy:</h3>
 	<table border="1">
 
 		<tr>
 			<th>Id</th>
-			<th>Wydawnictwo</th>
+			<th>Autor</th>
 		</tr>
 
-		<c:forEach var="p" items="${allPublishers}">
+		<c:forEach var="p" items="${allAuthors}">
 
 			<tr>
 				<td>${p.id}</td>
-				<td>${p.publisherName}</td>
-				<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/del">Usuń</a></td>
-				<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/modify">Modyfikuj</a></td>
+				<td>${p.author}</td>
+				
 
 			</tr>
 
