@@ -28,7 +28,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages= {"com.dominiczeq.repository"})
+@EnableJpaRepositories(basePackages= {"com.dominiczeq.project.repository"})
 public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
