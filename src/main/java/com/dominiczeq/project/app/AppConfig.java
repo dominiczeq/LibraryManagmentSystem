@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -23,12 +24,16 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import com.dominiczeq.project.converter.AuthorConverter;
+import com.dominiczeq.project.converter.GenreConverter;
+import com.dominiczeq.project.converter.PublisherConverter;
+
 @Configuration
 @ComponentScan(basePackages = { "com.dominiczeq" })
 
 @EnableWebMvc
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages= {"com.dominiczeq.project.repository"})
+@EnableJpaRepositories(basePackages = { "com.dominiczeq.project.repository" })
 public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
@@ -67,6 +72,28 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public Validator validator() {
 		return new LocalValidatorFactoryBean();
+	}
+
+	@Override
+	public void addFormatters(FormatterRegistry registry) {
+		registry.addConverter(authorConverter());
+		registry.addConverter(publisherConverter());
+		registry.addConverter(genreConverter());
+	}
+
+	@Bean
+	public PublisherConverter publisherConverter() {
+		return new PublisherConverter();
+	}
+
+	@Bean
+	public AuthorConverter authorConverter() {
+		return new AuthorConverter();
+	}
+	
+	@Bean
+	public GenreConverter genreConverter() {
+		return new GenreConverter();
 	}
 
 	@Bean(name = "localeResolver")
