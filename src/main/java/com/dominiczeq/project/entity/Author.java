@@ -39,4 +39,9 @@ public class Author {
 		this.author = author;
 	}
 
+	@Override
+	public String toString() {
+		return author;
+	}
+
 }

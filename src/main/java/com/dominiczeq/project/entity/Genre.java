@@ -39,4 +39,9 @@ public class Genre {
 		this.genre = genre;
 	}
 
+	@Override
+	public String toString() {
+		return genre;
+	}
+
 }
