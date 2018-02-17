@@ -25,8 +25,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import com.dominiczeq.project.converter.AuthorConverter;
+import com.dominiczeq.project.converter.BookConverter;
 import com.dominiczeq.project.converter.GenreConverter;
 import com.dominiczeq.project.converter.PublisherConverter;
+import com.dominiczeq.project.converter.UserConverter;
 
 @Configuration
 @ComponentScan(basePackages = { "com.dominiczeq" })
@@ -79,6 +81,8 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		registry.addConverter(authorConverter());
 		registry.addConverter(publisherConverter());
 		registry.addConverter(genreConverter());
+		registry.addConverter(bookConverter());
+		registry.addConverter(userConverter());
 	}
 
 	@Bean
@@ -94,6 +98,14 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public GenreConverter genreConverter() {
 		return new GenreConverter();
+	}
+	
+	@Bean BookConverter bookConverter() {
+		return new BookConverter();
+	}
+	
+	@Bean UserConverter userConverter() {
+		return new UserConverter();
 	}
 
 	@Bean(name = "localeResolver")
