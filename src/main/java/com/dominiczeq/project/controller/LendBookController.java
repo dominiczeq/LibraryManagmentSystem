@@ -42,13 +42,11 @@ public class LendBookController {
 	public String rentBook(@ModelAttribute LendBook lendBook) {
 		lendBook.setLendDate(LocalDate.now());
 		lendBook.setReturnBook(LocalDate.now().plusDays(20));
-		long bookAmount = lendBook.getBook().getAmount();
-		int boorowedBook = lendBook.getUser().getBorrowedBooks();
+		long bookAmount = lendBook.getBook().getAmount() - 1;
 		if (bookAmount > 0) {
 
 			long id = lendBook.getBook().getId();
 			this.bookRepo.setAmountBook(bookAmount - 1, id);
-			this.userRepo.setBorrowedBook(boorowedBook + 1, lendBook.getUser().getId());
 			this.lendBookRepo.save(lendBook);
 			return "/home";
 		} else {
