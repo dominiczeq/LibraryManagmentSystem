@@ -103,4 +103,9 @@ public class Book {
 		this.amount = amount;
 	}
 
+	@Override
+	public String toString() {
+		return title + " - " + author;
+	}
+
 }

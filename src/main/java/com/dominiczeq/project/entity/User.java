@@ -79,4 +79,9 @@ public class User {
 		this.borrowedBooks = borrowedBooks;
 	}
 
+	@Override
+	public String toString() {
+		return name + " " + surname;
+	}
+
 }
