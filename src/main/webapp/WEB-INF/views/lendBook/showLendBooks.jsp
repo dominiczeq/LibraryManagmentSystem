@@ -17,24 +17,25 @@
 
 		<tr>
 			<th>Id</th>
-			<th>Tytuł</th>
-			<th>Autor</th>
-			<th>Wydawca</th>
-			<th>Gatunek</th>
-			<th>Data wydania</th>
-			<th>Stan na magazynie</th>
+			<th>Tytuł książki</th>
+			<th>Wypożyczający</th>
+			<th>Data wypożyczenia</th>
+			<th>Ostateczna data oddania</th>
+			<th>Zwróć książkę</th>
+			
 		</tr>
 
 		<c:forEach var="p" items="${allBooks}">
 
 			<tr>
 				<td>${p.id}</td>
-				<td>${p.title}</td>
-				<td>${p.author}</td>
-				<td>${p.publisher}</td>
-				<td>${p.genre}</td>
-				<td>${p.publicationDate}</td>
-				<td>${p.amount}</td>
+				<td>${p.book}</td>
+				<td>${p.user}</td>
+				<td>${p.lendDate}</td>
+				<td>${p.returnBook}</td>
+				<td><a href="${pageContext.request.contextPath}/returnBook/${p.id}" class="href">Zwróć książkę</a>
+				</td>
+				
 
 			</tr>
 

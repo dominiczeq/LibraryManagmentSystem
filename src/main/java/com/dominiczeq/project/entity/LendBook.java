@@ -91,7 +91,5 @@ public class LendBook {
 	public void setReturn(boolean isReturn) {
 		this.isReturn = isReturn;
 	}
-	
-	
 
 }

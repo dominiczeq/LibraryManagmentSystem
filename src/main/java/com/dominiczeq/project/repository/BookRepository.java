@@ -9,11 +9,12 @@ import org.springframework.data.jpa.repository.Query;
 import com.dominiczeq.project.entity.Book;
 
 public interface BookRepository extends JpaRepository<Book, Long> {
-	
+
 	@Modifying
-	@Query(nativeQuery=true, value="UPDATE book SET amount=?1 WHERE id=?2")
+	@Query(nativeQuery = true, value = "UPDATE book SET amount=?1 WHERE id=?2")
 	void setAmountBook(Long amount, Long userId);
 
-	@Query(nativeQuery=true, value="SELECT * FROM book WHERE amount>0")
+	@Query(nativeQuery = true, value = "SELECT * FROM book WHERE amount>0")
 	List<Book> allBookInLibrary();
+
 }

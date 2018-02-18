@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.dominiczeq.project.entity.Book;
@@ -29,6 +30,11 @@ public class LendBookController {
 
 	@Autowired
 	private LendBookRepository lendBookRepo;
+
+	@GetMapping("/home")
+	public String home() {
+		return "home";
+	}
 
 	@GetMapping("/lendBook")
 	public String rentBook(Model m) {
@@ -55,6 +61,30 @@ public class LendBookController {
 
 			return "lendBook/noBook";
 		}
+
+	}
+
+	@GetMapping("/showLendBooks")
+	public String showLendBook(Model m) {
+		List<LendBook> allLendbooks = this.lendBookRepo.findAllByIsReturn(false);
+		m.addAttribute("allBooks", allLendbooks);
+		return "lendBook/showLendBooks";
+	}
+
+	@GetMapping("/showReturnedBooks")
+	public String showReturnedBook(Model m) {
+		List<LendBook> allReturnedBooks = this.lendBookRepo.findAllByIsReturn(true);
+		m.addAttribute("returnedBooks", allReturnedBooks);
+		return "lendBook/showReturnedBooks";
+	}
+
+	@Transactional
+	@GetMapping("returnBook/{id}")
+	public String returnBook(@PathVariable long id) {
+		LocalDate returnDate = LocalDate.now();
+		this.lendBookRepo.setIsReturnEqual1AndreturnDate(returnDate, id);
+
+		return "/home";
 
 	}
 
