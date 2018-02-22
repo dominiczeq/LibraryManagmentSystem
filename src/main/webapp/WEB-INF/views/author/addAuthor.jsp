@@ -14,7 +14,7 @@
 
 <form:form method="post" modelAttribute="author">
 
-Autor: <form:input path="author" type="text"/>
+Nazwa autora: <form:input path="authorName" type="text"/>
 
 <br/>
 <input type="submit" />
