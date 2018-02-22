@@ -11,7 +11,7 @@ public class Author {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String author;
+	private String authorName;
 
 	public Author() {
 		super();
@@ -20,7 +20,7 @@ public class Author {
 	public Author(long id, String author) {
 		super();
 		this.id = id;
-		this.author = author;
+		this.authorName = author;
 	}
 
 	public long getId() {
@@ -31,17 +31,14 @@ public class Author {
 		this.id = id;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getAuthorName() {
+		return authorName;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
 	}
 
-	@Override
-	public String toString() {
-		return author;
-	}
+
 
 }
