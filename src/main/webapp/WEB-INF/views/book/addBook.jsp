@@ -23,8 +23,9 @@
 	Autor:<form:select path="author">
 			<form:options items="${availableAuthors}" 
 			itemValue="id"
-			itemLabel="author" />
+			itemLabel="authorName" />
 		</form:select>
+		<a class="nav-link" href="${pageContext.request.contextPath}/addAuthor" class="href">Dodaj autora</a>
 		<br />
 		<br />
 			
@@ -33,14 +34,16 @@
 			itemValue="id"
 			itemLabel="publisherName" />
 		</form:select>
+		<a class="nav-link" href="${pageContext.request.contextPath}/addPublisher" class="href">Dodaj wydawnictwo</a>
 		<br />
 		<br />
 			
-	 Gatunek:<form:select path="genre">
+	 Gatunek:   <form:select path="genre">
 			<form:options items="${availableGenres}" 
 			itemValue="id"
-			itemLabel="genre" />
+			itemLabel="genreName" />
 		</form:select>
+				<a class="nav-link" href="${pageContext.request.contextPath}/addGenre" class="href">Dodaj autora</a>
 		<br />
 		<br />
 	

@@ -14,7 +14,7 @@
 
 <form:form method="post" modelAttribute="genre">
 
-Gatunek: <form:input path="genre" type="text"/>
+Gatunek: <form:input path="genreName" type="text"/>
 
 <br/>
 <input type="submit" />

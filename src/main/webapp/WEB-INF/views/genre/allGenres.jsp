@@ -23,7 +23,7 @@
 
 			<tr>
 				<td>${p.id}</td>
-				<td>${p.genre}</td>
+				<td>${p.genreName}</td>
 				
 
 			</tr>

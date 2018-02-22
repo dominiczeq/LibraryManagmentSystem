@@ -17,10 +17,10 @@ public class Author {
 		super();
 	}
 
-	public Author(long id, String author) {
+	public Author(long id, String authorName) {
 		super();
 		this.id = id;
-		this.authorName = author;
+		this.authorName = authorName;
 	}
 
 	public long getId() {
@@ -37,6 +37,11 @@ public class Author {
 
 	public void setAuthorName(String authorName) {
 		this.authorName = authorName;
+	}
+
+	@Override
+	public String toString() {
+		return authorName;
 	}
 
 

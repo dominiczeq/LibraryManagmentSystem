@@ -11,16 +11,16 @@ public class Genre {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	private String genre;
+	private String genreName;
 
 	public Genre() {
 		super();
 	}
 
-	public Genre(long id, String genre) {
+	public Genre(long id, String genreName) {
 		super();
 		this.id = id;
-		this.genre = genre;
+		this.genreName = genreName;
 	}
 
 	public long getId() {
@@ -31,17 +31,17 @@ public class Genre {
 		this.id = id;
 	}
 
-	public String getGenre() {
-		return genre;
+	public String getGenreName() {
+		return genreName;
 	}
 
-	public void setGenre(String genre) {
-		this.genre = genre;
+	public void setGenreName(String genreName) {
+		this.genreName = genreName;
 	}
 
 	@Override
 	public String toString() {
-		return genre;
+		return genreName;
 	}
 
 }

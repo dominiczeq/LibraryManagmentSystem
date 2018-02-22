@@ -24,7 +24,7 @@
 
 			<tr>
 				<td>${p.id}</td>
-				<td>${p.author}</td>
+				<td>${p.authorName}</td>
 				
 
 			</tr>
