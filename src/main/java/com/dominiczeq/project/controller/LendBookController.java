@@ -56,7 +56,7 @@ public class LendBookController {
 			this.bookRepo.setAmountBook(bookAmount - 1, id);
 			this.userRepo.setBorrowedBook(boorowedBook + 1, lendBook.getUser().getId());
 			this.lendBookRepo.save(lendBook);
-			return "/home";
+			return "lendBook/lendComplete";
 		} else {
 
 			return "lendBook/noBook";
@@ -79,12 +79,13 @@ public class LendBookController {
 	}
 
 	@Transactional
-	@GetMapping("returnBook/{id}/{idBook}")
-	public String returnBook(@PathVariable long id, @PathVariable long idBook) {
+	@GetMapping("returnBook/{id}/{bookId}/{userId}")
+	public String returnBook(@PathVariable long id, @PathVariable long bookId, @PathVariable long userId) {
 		LocalDate returnDate = LocalDate.now();
-		this.bookRepo.incrementAmountBook(idBook);
+		this.bookRepo.incrementAmountBook(bookId);
+		this.userRepo.decrementBorrowedBook(userId);
 		this.lendBookRepo.setIsReturnEqual1AndreturnDate(returnDate, id);
-		return "/home";
+		return "lendBook/showReturnedBooks";
 	}
 
 	@ModelAttribute("availableUsers")

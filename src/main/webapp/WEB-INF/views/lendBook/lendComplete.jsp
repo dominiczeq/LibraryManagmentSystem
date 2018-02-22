@@ -13,7 +13,7 @@
 	<%@ include file="../jspf/mainMenu.jspf"%>
 	<div class="container">
 
-		<h3>Aktualnie brak książki w bibliotece</h3>
+		<h3>Wypożyczenie książki zostało zapisane w bazie danych</h3>
 
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
