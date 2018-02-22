@@ -15,27 +15,32 @@
 
 	<%@ include file="../jspf/mainMenu.jspf"%>
 	<div class="container">
+	<div class="col-10">
 
-	<h3>Historia wypożyczonych pozycji</h3>
-	<table border="1">
-		<tr>
-			<th>Id</th>
-			<th>Tytuł książki</th>
-			<th>Wypożyczający</th>
-			<th>Data wypożyczenia</th>
-			<th>Data oddania</th>		
-		</tr>
-		<c:forEach var="p" items="${returnedBooks}">
-			<tr>
-				<td>${p.id}</td>
-				<td>${p.book}</td>
-				<td>${p.user}</td>
-				<td>${p.lendDate}</td>
-				<td>${p.returnBook}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	
+		<h3>Historia wypożyczonych pozycji</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Tytuł książki</th>
+					<th scope="col">Wypożyczający</th>
+					<th scope="col">Data wypożyczenia</th>
+					<th scope="col">Data oddania</th>
+				</tr>
+			</thead>
+			<c:forEach var="p" items="${returnedBooks}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.book}</td>
+						<td>${p.user}</td>
+						<td>${p.lendDate}</td>
+						<td>${p.returnBook}</td>
+					</tr>
+				</tbody>
+			</c:forEach>
+		</table>
+		</div>
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
 

@@ -15,28 +15,27 @@
 
 	<%@ include file="../jspf/mainMenu.jspf"%>
 	<div class="container">
+		<div class="col-6">
 
 		<h3>Autorzy znajdujący się w bazie</h3>
-		<table border="1">
-
-			<tr>
-				<th>Id</th>
-				<th>Autor</th>
-			</tr>
-
-			<c:forEach var="p" items="${allAuthors}">
-
+		<table class="table table-hover">
+			<thead>
 				<tr>
-					<td>${p.id}</td>
-					<td>${p.authorName}</td>
-
-
+					<th scope="col">Id</th>
+					<th scope="col">Autor</th>
 				</tr>
-
+			</thead>
+			<c:forEach var="p" items="${allAuthors}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.authorName}</td>
+					</tr>
+				</tbody>
 			</c:forEach>
-
 		</table>
 		</div>
-		<%@ include file="../jspf/footer.jspf"%>
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 </body>
 </html>

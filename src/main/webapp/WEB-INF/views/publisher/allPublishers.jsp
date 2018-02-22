@@ -15,22 +15,28 @@
 
 	<%@ include file="../jspf/mainMenu.jspf"%>
 	<div class="container">
-	<h3>Lista Wydawnictw</h3>
-		<table border="1">
-			<tr>
-				<th>Id</th>
-				<th>Wydawnictwo</th>
-			</tr>
-			<c:forEach var="p" items="${allPublishers}">
+		<div class="col-6">
+	
+		<h3>Lista Wydawnictw</h3>
+		<table class="table table-hover">
+			<thead>
 				<tr>
-					<td>${p.id}</td>
-					<td>${p.publisherName}</td>
-					<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/del">Usuń</a></td>
-					<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/modify">Modyfikuj</a></td>
+					<th scope="col">Id</th>
+					<th scope="col">Wydawnictwo</th>
 				</tr>
+			</thead>
+			<c:forEach var="p" items="${allPublishers}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.publisherName}</td>
+						<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/del">Usuń</a></td>
+						<td><a href="${pageContext.request.contextPath}/publisher/${p.id}/modify">Modyfikuj</a></td>
+					</tr>
+				</tbody>
 			</c:forEach>
 		</table>
-
+		</div>
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
 

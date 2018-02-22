@@ -17,35 +17,33 @@
 
 	<div class="container">
 
-	<h3>Wszystkie pozycje w bibliotece</h3>
-	<table border="1">
-
-		<tr>
-			<th>Id</th>
-			<th>Tytuł</th>
-			<th>Autor</th>
-			<th>Wydawca</th>
-			<th>Gatunek</th>
-			<th>Data wydania</th>
-			<th>Stan na magazynie</th>
-		</tr>
-
-		<c:forEach var="p" items="${allBooks}">
-
-			<tr>
-				<td>${p.id}</td>
-				<td>${p.title}</td>
-				<td>${p.author}</td>
-				<td>${p.publisher}</td>
-				<td>${p.genre}</td>
-				<td>${p.publicationDate}</td>
-				<td>${p.amount}</td>
-
-			</tr>
-
-		</c:forEach>
-
-	</table>
+		<h3>Wszystkie pozycje w bibliotece</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Tytuł</th>
+					<th scope="col">Autor</th>
+					<th scope="col">Wydawca</th>
+					<th scope="col">Gatunek</th>
+					<th scope="col">Data wydania</th>
+					<th scope="col">Stan na magazynie</th>
+				</tr>
+			</thead>
+			<c:forEach var="p" items="${allBooks}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.title}</td>
+						<td>${p.author}</td>
+						<td>${p.publisher}</td>
+						<td>${p.genre}</td>
+						<td>${p.publicationDate}</td>
+						<td>${p.amount}</td>
+					</tr>
+				</tbody>
+			</c:forEach>
+		</table>
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
 

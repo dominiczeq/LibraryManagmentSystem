@@ -15,21 +15,25 @@
 
 	<%@ include file="../jspf/mainMenu.jspf"%>
 	<div class="container">
-<h3>Lista gatunków literackich</h3>
-		<table border="1">
-			<tr>
-				<th>Id</th>
-				<th>Gatunek</th>
-			</tr>
-
-			<c:forEach var="p" items="${allGenres}">
+	<div class="col-6">
+		<h3>Lista gatunków literackich</h3>
+		<table class="table table-hover">
+			<thead>
 				<tr>
-					<td>${p.id}</td>
-					<td>${p.genreName}</td>
+					<th scope="col">Id</th>
+					<th scope="col">Gatunek</th>
 				</tr>
+			</thead>
+			<c:forEach var="p" items="${allGenres}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.genreName}</td>
+					</tr>
+				</tbody>
 			</c:forEach>
 		</table>
-
+		</div>
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
 

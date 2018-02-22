@@ -43,7 +43,6 @@
 				</tbody>
 			</c:forEach>
 		</table>
-
 	</div>
 	<%@ include file="../jspf/footer.jspf"%>
 

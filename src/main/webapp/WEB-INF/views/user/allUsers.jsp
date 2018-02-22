@@ -17,24 +17,28 @@
 	<div class="container">
 
 		<h3>Lista czytelników:</h3>
-		<table border="1">
-			<tr>
-				<th>Id</th>
-				<th>Imię</th>
-				<th>Nazwisko</th>
-				<th>Email</th>
-				<th>Numer telefonu</th>
-				<th>ilość wypożycznych książek</th>
-			</tr>
-			<c:forEach var="p" items="${allUsers}">
+		<table class="table table-hover">
+			<thead>
 				<tr>
-					<td>${p.id}</td>
-					<td>${p.name}</td>
-					<td>${p.surname}</td>
-					<td>${p.email}</td>
-					<td>${p.phoneNumber}</td>
-					<td>${p.borrowedBooks}</td>
+					<th scope="col">Id</th>
+					<th scope="col">Imię</th>
+					<th scope="col">Nazwisko</th>
+					<th scope="col">Email</th>
+					<th scope="col">Numer telefonu</th>
+					<th scope="col">ilość wypożycznych książek</th>
 				</tr>
+			</thead>
+			<c:forEach var="p" items="${allUsers}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.name}</td>
+						<td>${p.surname}</td>
+						<td>${p.email}</td>
+						<td>${p.phoneNumber}</td>
+						<td>${p.borrowedBooks}</td>
+					</tr>
+				</tbody>
 			</c:forEach>
 		</table>
 	</div>
