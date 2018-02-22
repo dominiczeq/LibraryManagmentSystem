@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>	
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="${pageContext.request.contextPath}/addUser" class="href">Dodaj użytkownika</a>
+  </li>
+    <li class="nav-item">
+     <a class="nav-link" href="${pageContext.request.contextPath}/lendBook" class="href">Wypożycz książkę</a>
+  </li>
+    <li class="nav-item">
+      <a class="nav-link" href="${pageContext.request.contextPath}/showLendBooks" class="href">Lista wypożyczonych książek</a>
+  </li>
+    <li class="nav-item">
+       <a class="nav-link" href="${pageContext.request.contextPath}/allBooks" class="href">Lista książek</a>
+  </li>
+  
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dodaj:</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/addBook" class="href">Dodaj książkę</a>
+      
+            <div class="dropdown-divider"></div>
+      
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/addAuthor" class="href">Dodaj autora</a>
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/addGenre" class="href">Dodaj gatunek</a>
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/addPublisher" class="href">Dodaj wydawnictwo</a>
+    </div>
+  </li>
+  
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Spis:</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/allBooks" class="href">Książek</a>
+      
+            <div class="dropdown-divider"></div>
+      
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/allAuthors" class="href">Autorów</a>
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/allGenres" class="href">Gatunków</a>
+      <a class="dropdown-item" href="${pageContext.request.contextPath}/allPublishers" class="href">Wydawnictw</a>
+    </div>
+  </li>
+  
+  <li class="nav-item">
+    <a class="nav-link" href="#">Dodatkowa funkcjonalność TODO</a>
+  </li>
+
+</ul>
