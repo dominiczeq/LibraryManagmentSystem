@@ -8,37 +8,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Lista książek</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-	<h3>Lista książek:</h3>
-	<table border="1">
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	<div class="container">
 
+	<h3>Historia wypożyczonych pozycji</h3>
+	<table border="1">
 		<tr>
 			<th>Id</th>
 			<th>Tytuł książki</th>
 			<th>Wypożyczający</th>
 			<th>Data wypożyczenia</th>
-			<th>Data oddania</th>
-			
+			<th>Data oddania</th>		
 		</tr>
-
 		<c:forEach var="p" items="${returnedBooks}">
-
 			<tr>
 				<td>${p.id}</td>
 				<td>${p.book}</td>
 				<td>${p.user}</td>
 				<td>${p.lendDate}</td>
 				<td>${p.returnBook}</td>
-				
-
 			</tr>
-
 		</c:forEach>
-
 	</table>
+	
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 
 </body>
 </html>

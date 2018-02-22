@@ -27,7 +27,7 @@ public class GenreController {
 	@PostMapping("/addGenre")
 	public String addGenre(@ModelAttribute Genre genre) {
 		this.genreRepo.save(genre);
-		return "genre/allGenres";
+		return "redirect:/allGenres";
 	}
 	
 	@GetMapping("/allGenres")

@@ -8,11 +8,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Lista książek</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-	<h3>Lista książek:</h3>
+	<%@ include file="../jspf/mainMenu.jspf"%>
+
+	<div class="container">
+
+	<h3>Wszystkie pozycje w bibliotece</h3>
 	<table border="1">
 
 		<tr>
@@ -41,6 +46,8 @@
 		</c:forEach>
 
 	</table>
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 
 </body>
 </html>

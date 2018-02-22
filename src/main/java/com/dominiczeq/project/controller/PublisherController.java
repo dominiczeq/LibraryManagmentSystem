@@ -29,7 +29,7 @@ public class PublisherController {
 	@PostMapping("/addPublisher")
 	public String addPublisher(@ModelAttribute Publisher publisher) {
 		this.pubRepo.save(publisher);
-		return "publisher/allPublishers";
+		return "redirect:/allPublishers";
 	}
 
 	@GetMapping("/allPublishers")

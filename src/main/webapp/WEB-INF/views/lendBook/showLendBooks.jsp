@@ -8,40 +8,44 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Lista książek</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-	<h3>Lista książek:</h3>
-	<table border="1">
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	<div class="container">
 
-		<tr>
-			<th>Id</th>
-			<th>Tytuł książki</th>
-			<th>Wypożyczający</th>
-			<th>Data wypożyczenia</th>
-			<th>Ostateczna data oddania</th>
-			<th>Zwróć książkę</th>
-			
-		</tr>
+		<h3>Książki aktualnie wypożyczone</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">Id</th>
+					<th scope="col">Tytuł książki</th>
+					<th scope="col">Wypożyczający</th>
+					<th scope="col">Data wypożyczenia</th>
+					<th scope="col">Ostateczna data oddania</th>
+					<th scope="col">Zwróć książkę</th>
+				</tr>
+			</thead>
+			<c:forEach var="p" items="${allBooks}">
+				<tbody>
+					<tr>
+						<th scope="row">${p.id}</th>
+						<td>${p.book}</td>
+						<td>${p.user}</td>
+						<td>${p.lendDate}</td>
+						<td>${p.returnBook}</td>
+						<td><a
+							href="${pageContext.request.contextPath}/returnBook/${p.id}/${p.book.id}/${p.user.id}"
+							class="href">Zwróć książkę</a></td>
+					</tr>
+				</tbody>
+			</c:forEach>
+		</table>
 
-		<c:forEach var="p" items="${allBooks}">
-
-			<tr>
-				<td>${p.id}</td>
-				<td>${p.book}</td>
-				<td>${p.user}</td>
-				<td>${p.lendDate}</td>
-				<td>${p.returnBook}</td>
-				<td><a href="${pageContext.request.contextPath}/returnBook/${p.id}" class="href">Zwróć książkę</a>
-				</td>
-				
-
-			</tr>
-
-		</c:forEach>
-
-	</table>
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 
 </body>
 </html>

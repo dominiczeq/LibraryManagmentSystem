@@ -8,29 +8,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Wszystkie gatunki literackie</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-	<table border="1">
-
-		<tr>
-			<th>Id</th>
-			<th>Gatunek</th>
-		</tr>
-
-		<c:forEach var="p" items="${allGenres}">
-
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	<div class="container">
+<h3>Lista gatunków literackich</h3>
+		<table border="1">
 			<tr>
-				<td>${p.id}</td>
-				<td>${p.genreName}</td>
-				
-
+				<th>Id</th>
+				<th>Gatunek</th>
 			</tr>
 
-		</c:forEach>
+			<c:forEach var="p" items="${allGenres}">
+				<tr>
+					<td>${p.id}</td>
+					<td>${p.genreName}</td>
+				</tr>
+			</c:forEach>
+		</table>
 
-	</table>
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 
 </body>
 </html>

@@ -9,36 +9,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dodaj książkę</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
-	<h3>Dodaj książkę:</h3>
 
-	<form:form method="post" modelAttribute="lendBook">
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	<div class="container">
 
+		<h3>Wypożycz książkę</h3>
+
+		<form:form method="post" modelAttribute="lendBook">
 	
-		
 	Książka:<form:select path="book">
-			<form:options items="${bookInLibrary}" 
-			itemValue="id"
-			itemLabel="title" />
-		</form:select>
-		<br />
-		<br />
+				<form:options items="${bookInLibrary}" itemValue="id"
+					itemLabel="title" />
+			</form:select>
+			<br />
+			<br />
 			
 	Użytkownik:<form:select path="user">
-			<form:options items="${availableUsers}" 
-			itemValue="id"
-			itemLabel="name" />
-		</form:select>
-		<br />
-		<br />
-			
-	 
+				<form:options var ="p" items="${availableUsers}" itemValue="id"
+					itemLabel="fullName" />
+			</form:select>
+			<br />
+			<br />
+			<input type="submit" />
 
-		<input type="submit" />
+		</form:form>
 
-	</form:form>
+	</div>
+	<%@ include file="../jspf/footer.jspf"%>
 
 </body>
 </html>

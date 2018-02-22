@@ -85,7 +85,7 @@ public class LendBookController {
 		this.bookRepo.incrementAmountBook(bookId);
 		this.userRepo.decrementBorrowedBook(userId);
 		this.lendBookRepo.setIsReturnEqual1AndreturnDate(returnDate, id);
-		return "lendBook/showReturnedBooks";
+		return "redirect:/showLendBooks";
 	}
 
 	@ModelAttribute("availableUsers")

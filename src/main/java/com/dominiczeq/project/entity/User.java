@@ -78,6 +78,10 @@ public class User {
 	public void setBorrowedBooks(int borrowedBooks) {
 		this.borrowedBooks = borrowedBooks;
 	}
+	
+	public String getFullName() {
+		return name + " " + surname;
+	}
 
 	@Override
 	public String toString() {

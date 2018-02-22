@@ -9,9 +9,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dodaj książkę</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
+
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	
+		<div class="container">
+	
 	<h3>Dodaj książkę:</h3>
 
 	<form:form method="post" modelAttribute="book">
@@ -58,5 +64,7 @@
 
 	</form:form>
 
+	<%@ include file="../jspf/footer.jspf"%>
+	</div>
 </body>
 </html>

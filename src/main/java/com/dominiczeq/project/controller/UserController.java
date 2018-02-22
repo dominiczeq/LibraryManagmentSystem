@@ -27,7 +27,7 @@ public class UserController {
 	@PostMapping("/addUser")
 	public String addAuthor(@ModelAttribute User user) {
 		this.userRepo.save(user);
-		return "user/allUsers";
+		return "redirect:/allUsers";
 	}
 
 	@GetMapping("/allUsers")

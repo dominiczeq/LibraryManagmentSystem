@@ -8,30 +8,35 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dostępni autorzy</title>
+<%@ include file="../jspf/headConfig.jspf"%>
+<title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-<h3>Dostępni autorzy:</h3>
-	<table border="1">
+	<%@ include file="../jspf/mainMenu.jspf"%>
+	<div class="container">
 
-		<tr>
-			<th>Id</th>
-			<th>Autor</th>
-		</tr>
-
-		<c:forEach var="p" items="${allAuthors}">
+		<h3>Autorzy znajdujący się w bazie</h3>
+		<table border="1">
 
 			<tr>
-				<td>${p.id}</td>
-				<td>${p.authorName}</td>
-				
-
+				<th>Id</th>
+				<th>Autor</th>
 			</tr>
 
-		</c:forEach>
+			<c:forEach var="p" items="${allAuthors}">
 
-	</table>
+				<tr>
+					<td>${p.id}</td>
+					<td>${p.authorName}</td>
 
+
+				</tr>
+
+			</c:forEach>
+
+		</table>
+		</div>
+		<%@ include file="../jspf/footer.jspf"%>
 </body>
 </html>

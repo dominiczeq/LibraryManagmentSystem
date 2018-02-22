@@ -42,7 +42,7 @@ public class BookController {
 	@PostMapping("/addBook")
 	public String addAuthor(@ModelAttribute Book book) {
 		this.bookRepo.save(book);
-		return "book/allBooks";
+		return "redirect:/allBooks";
 	}
 
 	@GetMapping("/allBooks")

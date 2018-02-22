@@ -27,7 +27,7 @@ public class AuthorController {
 	@PostMapping("/addAuthor")
 	public String addAuthor(@ModelAttribute Author author) {
 		this.authorRepo.save(author);
-		return "author/allAuthors";
+		return "redirect:/allAuthors";
 	}
 
 	@GetMapping("/allAuthors")
