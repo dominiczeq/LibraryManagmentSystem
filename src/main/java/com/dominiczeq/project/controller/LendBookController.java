@@ -79,13 +79,12 @@ public class LendBookController {
 	}
 
 	@Transactional
-	@GetMapping("returnBook/{id}")
-	public String returnBook(@PathVariable long id) {
+	@GetMapping("returnBook/{id}/{idBook}")
+	public String returnBook(@PathVariable long id, @PathVariable long idBook) {
 		LocalDate returnDate = LocalDate.now();
+		this.bookRepo.incrementAmountBook(idBook);
 		this.lendBookRepo.setIsReturnEqual1AndreturnDate(returnDate, id);
-
 		return "/home";
-
 	}
 
 	@ModelAttribute("availableUsers")
