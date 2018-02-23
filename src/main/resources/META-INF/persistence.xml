@@ -7,9 +7,9 @@
 	version="2.1">
 	<persistence-unit name="library_system">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/library_system" />
-			<property name="javax.persistence.jdbc.user" value="root" />
-			<property name="javax.persistence.jdbc.password" value="coderslab" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql11.freemysqlhosting.net/sql11222815" />
+			<property name="javax.persistence.jdbc.user" value="sql11222815" />
+			<property name="javax.persistence.jdbc.password" value="AKfBLBlMjk" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="none" />
