@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@	taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -17,9 +17,9 @@
 
 		<h3>Dodaj nowego autora:</h3>
 
-		<form:form method="post" modelAttribute="author">
+		<form:form method="post" modelAttribute="author"> 
 
-Nazwa autora: <form:input path="authorName" type="text" />
+Nazwa autora: <form:input path="authorName" type="text" /> <form:errors path="authorName"/>
 
 			<br />
 			<input type="submit" />

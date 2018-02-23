@@ -19,12 +19,26 @@
 
 		<form:form method="post" modelAttribute="user">
 
-	Imię: <form:input path="name" type="text" />
-	Nazwisko: <form:input path="surname" type="text" />
-	E-mail: <form:input path="email" type="text" />
-	Numer kontaktowy: <form:input path="phoneNumber" type="text" />
-
+	Imię: 
+	<form:input path="name" type="text" />
+			<form:errors path="name" />
 			<br />
+			
+	Nazwisko: 
+	<form:input path="surname" type="text" />
+			<form:errors path="surname" />
+			<br />
+			
+	E-mail: 
+	<form:input path="email" type="text" />
+			<form:errors path="email" />
+			<br />
+			
+	Numer kontaktowy: 
+	<form:input path="phoneNumber" type="number" />
+			<form:errors path="phoneNumber" />
+			<br />
+
 			<input type="submit" />
 
 		</form:form>

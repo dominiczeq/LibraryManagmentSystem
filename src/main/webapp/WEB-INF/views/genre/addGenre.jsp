@@ -19,7 +19,7 @@
 
 		<form:form method="post" modelAttribute="genre">
 
-Gatunek: <form:input path="genreName" type="text" />
+Gatunek: <form:input path="genreName" type="text" /> <form:errors path="genreName"/>
 
 			<br />
 			<input type="submit" />

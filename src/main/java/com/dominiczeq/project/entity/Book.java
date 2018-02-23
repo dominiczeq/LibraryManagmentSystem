@@ -6,6 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Book {
@@ -14,6 +19,7 @@ public class Book {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
+	@Size(min=3, message="Tytuł jest zbyt krótki")
 	private String title;
 
 	@ManyToOne
@@ -28,7 +34,11 @@ public class Book {
 	@JoinColumn(name = "genre_id")
 	private Genre genre;
 
+	@Min(value=1950, message="Data wydania musi być wcześniejsza niż 1950r")
+	@Max(value=2018, message="Data wydania nie może być późniejsza niż 2018r")
 	private int publicationDate;
+	
+	@Min(value=1, message="Musisz dodać przynajmniej 1 książkę")
 	private int amount;
 
 	public Book() {

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 
@@ -12,6 +13,8 @@ public class Publisher {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Size(min=3, max=40, message="Pole musi zawierać między 3 a 40 znaków")
 	private String publisherName;
 
 	public Publisher() {
