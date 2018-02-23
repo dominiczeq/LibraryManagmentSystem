@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 						http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="library_system">
+	<persistence-unit name="sql11222815">
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql11.freemysqlhosting.net/sql11222815" />
 			<property name="javax.persistence.jdbc.user" value="sql11222815" />
