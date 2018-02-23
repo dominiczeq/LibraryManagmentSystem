@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<%@ include file="jspf/headConfig.jspf" %>
+<%@ include file="jspf/headConfig.jspf"%>
 <title>System zarządzania biblioteką</title>
 </head>
 <body>
 
-<%@ include file="jspf/mainMenu.jspf" %>
+	<%@ include file="jspf/mainMenu.jspf"%>
 
-<h2>Strona główna</h2>
+	<div class="container">
+		<h3 class="homepage">Jesteś na stronie głównej</h3>
 
-<%@ include file="jspf/footer.jspf" %>
+		<p class="homepage">
+			Projekt prostej aplikacji webowej do obsługi biblioteki <br />
+			Technologie wykorzystane w projekcie:
+		</p>
 
+		<p class="homepage">
+			<ul>
+				<li>Java 8</li>
+				<li>Spring</li>
+				<li>Hibernate</li>
+				<li>Spring Data</li>
+				<li>Maven</li>
+				<li>MySQL</li>
+				<li>Bootstrap</li>
+			</ul>
+		</p>
 
+	</div>
+	<%@ include file="jspf/footer.jspf"%>
 
 </body>
 </html>
