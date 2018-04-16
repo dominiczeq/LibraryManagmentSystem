@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 						http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="sql11224141">
+	<persistence-unit name="sql7232972">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql11.freemysqlhosting.net/sql11224141" />
-			<property name="javax.persistence.jdbc.user" value="sql11224141" />
-			<property name="javax.persistence.jdbc.password" value="wTTibWtuBi" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql7.freemysqlhosting.net/sql7232972" />
+			<property name="javax.persistence.jdbc.user" value="sql7232972" />
+			<property name="javax.persistence.jdbc.password" value="6bWPAKG4ch" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="none" />
