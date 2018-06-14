@@ -37,7 +37,7 @@ public class PublisherController {
 			return "publisher/addPublisher";
 		}
 		this.pubRepo.save(publisher);
-		return "redirect:/allPublishers";
+		return "redirect:/addPublisher";
 	}
 
 	@GetMapping("/allPublishers")

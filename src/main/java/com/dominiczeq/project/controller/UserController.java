@@ -35,7 +35,7 @@ public class UserController {
 			return "user/addUser";
 		}
 		this.userRepo.save(user);
-		return "redirect:/allUsers";
+		return "redirect:/addUser";
 	}
 
 	@GetMapping("/allUsers")
