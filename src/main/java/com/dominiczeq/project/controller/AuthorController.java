@@ -35,7 +35,7 @@ public class AuthorController {
 				return "author/addAuthor";
 			}
 		this.authorRepo.save(author);
-		return "redirect:/allAuthors";
+		return "redirect:/addAuthor";
 	}
 
 	@GetMapping("/allAuthors")

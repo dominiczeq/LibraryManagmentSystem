@@ -35,7 +35,7 @@ public class GenreController {
 			return "genre/addGenre";
 		}
 		this.genreRepo.save(genre);
-		return "redirect:/allGenres";
+		return "redirect:/addGenre";
 	}
 	
 	@GetMapping("/allGenres")

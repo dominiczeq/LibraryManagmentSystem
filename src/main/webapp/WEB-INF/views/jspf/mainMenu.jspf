@@ -3,6 +3,8 @@
     pageEncoding="UTF-8" isELIgnored="false"%>	
 
 <ul class="nav nav-tabs">
+ <li class="nav-item">
+    <a class="nav-link" href="${pageContext.request.contextPath}" class="href">Strona główna</a>
   <li class="nav-item">
     <a class="nav-link" href="${pageContext.request.contextPath}/addUser" class="href">Dodaj użytkownika</a>
   </li>

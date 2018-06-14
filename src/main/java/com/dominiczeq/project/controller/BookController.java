@@ -50,7 +50,7 @@ public class BookController {
 			return "book/addBook";
 		}
 		this.bookRepo.save(book);
-		return "redirect:/allBooks";
+		return "redirect:/addBook";
 	}
 
 	@GetMapping("/allBooks")
