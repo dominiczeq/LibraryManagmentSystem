@@ -31,7 +31,7 @@
 			itemValue="id"
 			itemLabel="authorName" />
 		</form:select>
-		<a class="nav-link" href="${pageContext.request.contextPath}/addAuthor" class="href">Dodaj autora</a>
+		<a class="nav-link" href="${pageContext.request.contextPath}/addAuthorFromBook" class="href">Dodaj autora</a>
 		<br />
 			
 	Wydawnictwo:<form:select path="publisher">
@@ -39,7 +39,7 @@
 			itemValue="id"
 			itemLabel="publisherName" />
 		</form:select>
-		<a class="nav-link" href="${pageContext.request.contextPath}/addPublisher" class="href">Dodaj wydawnictwo</a>
+		<a class="nav-link" href="${pageContext.request.contextPath}/addPublisherFromBook" class="href">Dodaj wydawnictwo</a>
 		<br />
 			
 	 Gatunek:   <form:select path="genre">
@@ -47,13 +47,13 @@
 			itemValue="id"
 			itemLabel="genreName" />
 		</form:select>
-				<a class="nav-link" href="${pageContext.request.contextPath}/addGenre" class="href">Dodaj autora</a>
+				<a class="nav-link" href="${pageContext.request.contextPath}/addGenreFromBook" class="href">Dodaj wydawnictwo</a>
 		<br />
 	
-	Rok wydania: <form:input path="publicationDate" type="number" value="1950" min="1950" max="2018"/> <form:errors path="publicationDate"/>
+	Rok wydania: <form:input path="publicationDate" type="number" value="2018" min="1950" max="2018"/> <form:errors path="publicationDate"/>
 		<br />
 		<br />
-	Ilość: <form:input path="amount" type="number" value="1" /> <form:errors path="amount"/>
+	Ilość: <form:input path="amount" type="number" value="1" max="200"/> <form:errors path="amount"/>
 		<br />
 		<br />
 

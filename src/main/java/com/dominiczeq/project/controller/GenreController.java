@@ -38,6 +38,22 @@ public class GenreController {
 		return "redirect:/addGenre";
 	}
 	
+	@GetMapping("/addGenreFromBook")
+	public String addGenreFromBook(Model m) {
+		m.addAttribute("genre", new Genre());
+		return "genre/addGenreFromBook";
+	}
+	
+	@PostMapping("/addGenreFromBook")
+	public String addGenreFromBook(@Valid @ModelAttribute Genre genre, BindingResult bindingResult) 
+			throws UnsupportedEncodingException {
+		if (bindingResult.hasErrors()) {
+			return "genre/addGenreFromBook";
+		}
+		this.genreRepo.save(genre);
+		return "redirect:/addBook";
+	}
+	
 	@GetMapping("/allGenres")
 	public String showAllGenres() {
 		return "genre/allGenres";
