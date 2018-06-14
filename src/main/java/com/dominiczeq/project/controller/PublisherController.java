@@ -39,6 +39,23 @@ public class PublisherController {
 		this.pubRepo.save(publisher);
 		return "redirect:/addPublisher";
 	}
+//	
+	@GetMapping("/addPublisherFromBook")
+	public String addPublisherFromBook(Model m) {
+		m.addAttribute("publisher", new Publisher());
+		return "publisher/addPublisherFromBook";
+	}
+
+	@PostMapping("/addPublisherFromBook")
+	public String addPublisherFromBook(@Valid @ModelAttribute Publisher publisher, BindingResult bindingResult)
+			throws UnsupportedEncodingException {
+		if (bindingResult.hasErrors()) {
+			return "publisher/addPublisherFromBook";
+		}
+		this.pubRepo.save(publisher);
+		return "redirect:/addBook";
+	}
+	
 
 	@GetMapping("/allPublishers")
 	public String showAllPublisher() {

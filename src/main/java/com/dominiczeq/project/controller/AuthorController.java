@@ -38,6 +38,22 @@ public class AuthorController {
 		return "redirect:/addAuthor";
 	}
 
+	@GetMapping("/addAuthorFromBook")
+	public String addAuthorFromBook(Model m) {
+		m.addAttribute("author", new Author());
+		return "author/addAuthorFromBook";
+	}
+
+	@PostMapping("/addAuthorFromBook")
+	public String addAuthorFromBook(@Valid @ModelAttribute Author author, BindingResult bindingResult) 
+		throws UnsupportedEncodingException {
+			if (bindingResult.hasErrors()) {
+				return "author/addAuthorFromBook";
+			}
+		this.authorRepo.save(author);
+		return "redirect:/addBook";
+	}
+	
 	@GetMapping("/allAuthors")
 	public String showAllAuthors() {
 		return "author/allAuthors";

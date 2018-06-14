@@ -13,7 +13,7 @@ public class Genre {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Size(min=4, max=30, message="Pole musi zawierać między 3 a 30 znaków")
+	@Size(min=4, max=30, message="Pole musi zawierać między 4 a 30 znaków")
 	private String genreName;
 
 	public Genre() {
