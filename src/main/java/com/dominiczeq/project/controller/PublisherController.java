@@ -1,11 +1,15 @@
 package com.dominiczeq.project.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +31,11 @@ public class PublisherController {
 	}
 
 	@PostMapping("/addPublisher")
-	public String addPublisher(@ModelAttribute Publisher publisher) {
+	public String addPublisher(@Valid @ModelAttribute Publisher publisher, BindingResult bindingResult)
+			throws UnsupportedEncodingException {
+		if (bindingResult.hasErrors()) {
+			return "publisher/addPublisher";
+		}
 		this.pubRepo.save(publisher);
 		return "redirect:/allPublishers";
 	}

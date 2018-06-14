@@ -22,7 +22,7 @@
 
 	<form:form method="post" modelAttribute="book">
 
-	Tytuł: <form:input path="title" type="text" />
+	Tytuł: <form:input path="title" type="text" /> <form:errors path="title"/>
 		<br />
 		<br />
 		
@@ -33,7 +33,6 @@
 		</form:select>
 		<a class="nav-link" href="${pageContext.request.contextPath}/addAuthor" class="href">Dodaj autora</a>
 		<br />
-		<br />
 			
 	Wydawnictwo:<form:select path="publisher">
 			<form:options items="${availablePublishers}" 
@@ -41,7 +40,6 @@
 			itemLabel="publisherName" />
 		</form:select>
 		<a class="nav-link" href="${pageContext.request.contextPath}/addPublisher" class="href">Dodaj wydawnictwo</a>
-		<br />
 		<br />
 			
 	 Gatunek:   <form:select path="genre">
@@ -51,12 +49,11 @@
 		</form:select>
 				<a class="nav-link" href="${pageContext.request.contextPath}/addGenre" class="href">Dodaj autora</a>
 		<br />
-		<br />
 	
-	Rok wydania: <form:input path="publicationDate" type="text" />
+	Rok wydania: <form:input path="publicationDate" type="number" value="1950" min="1950" max="2018"/> <form:errors path="publicationDate"/>
 		<br />
 		<br />
-	Ilość: <form:input path="amount" type="text" />
+	Ilość: <form:input path="amount" type="number" value="1" /> <form:errors path="amount"/>
 		<br />
 		<br />
 

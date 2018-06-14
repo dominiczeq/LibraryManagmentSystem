@@ -20,7 +20,7 @@
 		<form:form method="post" modelAttribute="publisher">
 
 			Nazwa wydawnictwa:
-			<form:input path="publisherName" type="text" />
+			<form:input path="publisherName" type="text" /> <form:errors path="publisherName"/>
 			<br />
 			<input type="submit" />
 		</form:form>

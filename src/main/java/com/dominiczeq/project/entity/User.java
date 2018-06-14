@@ -4,7 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+<<<<<<< HEAD
 import javax.persistence.Table;
+=======
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+>>>>>>> master
 
 @Entity
 @Table(name = "user")
@@ -13,10 +19,19 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Size(min=3, message="Imię jest zbyt krótkie")
 	private String name;
+	
+	@Size(min=3, message="Nazwisko jest zbyt krótkie")
 	private String surname;
+	
+	@Email(message="Niewłaściwy adres email")
 	private String email;
+	
+	@Size(min=9, max=12, message="Numer telefonu musi się składać z 9 do 12 cyfr")
 	private String phoneNumber;
+	
 	private int borrowedBooks;
 
 	public User() {
