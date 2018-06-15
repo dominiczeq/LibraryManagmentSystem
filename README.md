@@ -29,3 +29,5 @@ Narzędzia wykorzystane w projekcie:
 
 Aplikacja dostępna jest pod adresem: 
 https://library-simple-system.herokuapp.com/
+
+Pierwsze załadowanie aplikacji zwykle trwa dłuższą chwilę - proszę o cierpliwość
