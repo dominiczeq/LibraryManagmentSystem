@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 						http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="sql7242923">
+	<persistence-unit name="2900958_library">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://sql7.freemysqlhosting.net/sql7242923" />
-			<property name="javax.persistence.jdbc.user" value="sql7242923" />
-			<property name="javax.persistence.jdbc.password" value="SfQdl7uQSG" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://fdb24.awardspace.net/2900958_library" />
+			<property name="javax.persistence.jdbc.user" value="2900958_library" />
+			<property name="javax.persistence.jdbc.password" value="librarysystem2018" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="none" />
