@@ -7,9 +7,9 @@
 	version="2.1">
 	<persistence-unit name="2900958_library">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://fdb24.awardspace.net/2900958_library" />
-			<property name="javax.persistence.jdbc.user" value="2900958_library" />
-			<property name="javax.persistence.jdbc.password" value="librarysystem2018" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://librarydbaws.cxou0xo1uvdg.eu-west-1.rds.amazonaws.com" />
+			<property name="javax.persistence.jdbc.user" value="admin" />
+			<property name="javax.persistence.jdbc.password" value="predatorhelios300" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="none" />
