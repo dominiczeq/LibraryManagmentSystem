@@ -5,11 +5,11 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 						http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
 	version="2.1">
-	<persistence-unit name="2900958_library">
+	<persistence-unit name="K9bGELGKP4">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://librarydbaws.cxou0xo1uvdg.eu-west-1.rds.amazonaws.com" />
-			<property name="javax.persistence.jdbc.user" value="admin" />
-			<property name="javax.persistence.jdbc.password" value="predatorhelios300" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://remotemysql.com" />
+			<property name="javax.persistence.jdbc.user" value="K9bGELGKP4" />
+			<property name="javax.persistence.jdbc.password" value="NUGTPGhTAb" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.schema-generation.database.action"
 				value="none" />
